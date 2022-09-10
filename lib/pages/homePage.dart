@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:piggyvest/Widgets/Icon_and_text_widget.dart';
 import 'package:piggyvest/Widgets/button_icon_widgets.dart';
+import 'package:icon/icon.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../utils/dimensions.dart';
 
@@ -38,6 +40,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    //TODO uncomment to know the page height
+    // print('Current Page value is '+MediaQuery.of(context).size.height.toString());
     return Scaffold(
       body: Stack(
         children: [
@@ -101,7 +105,9 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                       child: CircleAvatar(
                                         radius: 25,
-                                        backgroundColor: Colors.blueAccent,
+                                        backgroundImage: AssetImage('images/phillip.png'),
+
+                                        // backgroundColor: Colors.blueAccent,
                                       ),
                                     ),
                                   ),
@@ -144,7 +150,8 @@ class _HomePageState extends State<HomePage> {
                                         decorator: DotsDecorator(
                                             activeColor: Colors.blueAccent,
                                             size: const Size.square(5.0),
-                                            activeSize: const Size(10.0, 5.0),
+                                            activeSize: const Size(15.0, 2.0),
+                                          activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(0), topRight: Radius.circular(0), bottomLeft: Radius.circular(0), bottomRight: Radius.circular(0),))
                                         ),
                                       ),
                                     ],
@@ -509,7 +516,7 @@ class _HomePageState extends State<HomePage> {
                                             right: 15,
                                             bottom: 20
                                         ),
-                                        child: IconAndText(color: Colors.white, bigText: 'Today\'s Rate', icons: Icons.alternate_email, smallText: 'Check out today\s rates across all savings features on PiggyVest', bigText1: 'See Rates'),
+                                        child: IconAndText(color: Colors.white, bigText: 'Today\'s Rate', icons: Icons.percent_rounded, smallText: 'Check out today\s rates across all savings features on PiggyVest', bigText1: 'See Rates'),
                                       ),
                                     ),
                                   ),
