@@ -264,7 +264,7 @@ class _SavingsPageState extends State<SavingsPage> {
                                             right: 15,
                                             bottom: 20
                                         ),
-                                        child: IconAndText(color: Colors.deepPurple.shade400, bigText: 'My PocketApp', icons: Icons.alternate_email, smallText: 'Move your savings to your pocket easily.', bigText1: 'My Pocket'),
+                                        child: IconAndText(color: Colors.deepPurple.shade300, bigText: 'My PocketApp', icons: Icons.alternate_email, smallText: 'Move your savings to your pocket easily.', bigText1: 'My Pocket'),
                                       ),
                                     ),
                                   ),

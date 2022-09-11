@@ -178,20 +178,23 @@ class _HomePageState extends State<HomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('INVESTMENT OPPORTUNITY', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12, color: Colors.grey.shade300, letterSpacing: -0.5),),
-                              Padding(padding: EdgeInsets.only(
-                              top: 10
-                              ),
-                                child: Container(
-                                  height: 180,
-                                  width: 400,
-                                  // color: Colors.blue,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    image: DecorationImage(
-                                      image: AssetImage('images/invest.png'),
-                                        fit: BoxFit.cover
-                                    )
-                                    // color: Colors.blue
+                              GestureDetector(
+                                onTap: (){},
+                                child: Padding(padding: EdgeInsets.only(
+                                top: 10
+                                ),
+                                  child: Container(
+                                    height: 180,
+                                    width: 400,
+                                    // color: Colors.blue,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      image: DecorationImage(
+                                        image: AssetImage('images/invest.png'),
+                                          fit: BoxFit.cover
+                                      )
+                                      // color: Colors.blue
+                                    ),
                                   ),
                                 ),
                               )
@@ -236,32 +239,29 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                         color: Colors.grey.shade700
                                       ),
-                                      child: GestureDetector(
-                                        onTap: (){},
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(2.0),
-                                          child: Container(
-                                            height: 98,
-                                            width: 300,
-                                            decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.only(
-                                                    topLeft: Radius.circular(10),
-                                                    topRight: Radius.circular(10),
-                                                    bottomRight: Radius.circular(10),
-                                                    bottomLeft: Radius.circular(3)
-                                                ),
-                                                color: Colors.grey.shade900
-                                            ),
-                                            child: Padding(
-                                              padding: const EdgeInsets.all(8.0),
-                                              child: Row(
-                                                children: [
-                                                  Icon(Icons.circle_outlined, color: Colors.blueAccent.shade700, size: 30,),
-                                                  SizedBox(width: 10,),
-                                                  Text('Safelock ₦50,000 for 61-90 days', style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, letterSpacing: -1),)
-
-                                                ],
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(2.0),
+                                        child: Container(
+                                          height: 98,
+                                          width: 300,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(10),
+                                                  topRight: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  bottomLeft: Radius.circular(3)
                                               ),
+                                              color: Colors.grey.shade900
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Row(
+                                              children: [
+                                                Icon(Icons.circle_outlined, color: Colors.blueAccent.shade700, size: 30,),
+                                                SizedBox(width: 10,),
+                                                Text('Safelock ₦50,000 for 61-90 days', style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white, letterSpacing: -1),)
+
+                                              ],
                                             ),
                                           ),
                                         ),

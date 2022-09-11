@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:piggyvest/pages/homePage.dart';
+import 'package:piggyvest/pages/investPage.dart';
 import 'package:piggyvest/pages/savingsPage.dart';
 
 class ButtonIcon extends StatelessWidget {
@@ -39,7 +40,7 @@ class ButtonIcon extends StatelessWidget {
           },
           child: Column(
             children: [
-              Icon(Icons.bungalow_rounded, color: icon1, size: size, ),
+              Icon(Icons.home_rounded, color: icon1, size: size, ),
               Text('Home', style: TextStyle(color: icon1, fontSize: textsize),),
               Icon(Icons.circle_rounded, size: 10, color: color1,)
             ],
@@ -60,7 +61,11 @@ class ButtonIcon extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: (){},
+          onTap: (){
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => InvestPage()));
+          },
           child: Column(
             children: [
               Icon(Icons.rocket_launch_rounded, color: icon3, size: size, ),
