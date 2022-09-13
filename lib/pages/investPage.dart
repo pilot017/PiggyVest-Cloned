@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:piggyvest/Widgets/button_icon_widgets.dart';
 import 'package:piggyvest/Widgets/investment_row_widget.dart';
+import 'package:piggyvest/pages/tab_view_screen.dart';
 
 import '../Widgets/Icon_and_text_widget.dart';
 
@@ -51,7 +52,7 @@ class _InvestPageState extends State<InvestPage> {
                                 top: 10,
                                 left: 23,
                                 right: 23,
-                                bottom: 5
+                                bottom: 0
                             ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +89,7 @@ class _InvestPageState extends State<InvestPage> {
                       ),
                     ),
                     Container(
-                      height: 580,
+                      height: 600,
                       width: double.maxFinite,
                       // color: Colors.white,
                       child: Padding(
@@ -124,97 +125,41 @@ class _InvestPageState extends State<InvestPage> {
                             ),
                             SizedBox(height: 20,),
                             //Active, Explore, Matured functions
-                            Container(
-                              height: 40,
-                              width: 400,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(12),
-                                      topRight: Radius.circular(12),
-                                      bottomRight: Radius.circular(12),
-                                      bottomLeft: Radius.circular(12)
-                                  ),
-                                  color: Colors.grey.shade700
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(2.0),
-                                child: Container(
-                                  height: 98,
-                                  width: 300,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(10),
-                                          topRight: Radius.circular(10),
-                                          bottomRight: Radius.circular(10),
-                                          bottomLeft: Radius.circular(10)
+                            DefaultTabController(
+                              length: 3,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    height: 40,
+                                    width: 350,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.grey.shade800,
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(20),
+                                          color: Colors.white,
+                                        ),
+                                        child: TabBar(
+                                          indicatorSize: TabBarIndicatorSize.tab,
+                                            indicator: BoxDecoration(color: Colors.purple),
+                                            labelPadding: EdgeInsets.all(4),
+                                            // indicatorPadding: EdgeInsets.all(10),
+                                            tabs: [
+                                              Tab(child: Text('Active', style: TextStyle(color: Colors.black),),),
+                                              Tab(child: Text('Invest', style: TextStyle(color: Colors.black),),),
+                                              Tab(child: Text('Matured', style: TextStyle(color: Colors.black),),),
+                                            ]),
                                       ),
-                                      color: Colors.grey.shade900
+                                    ),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(0),
-                                    child: InvestmentRow()
-                                  ),
-                                ),
+                                ],
                               ),
                             ),
                             SizedBox(height: 10,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                GestureDetector(
-                                  onTap: (){},
-                                  child: Container(
-                                    height: 170,
-                                    width: 168,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(10),
-                                            topRight: Radius.circular(10),
-                                            bottomRight: Radius.circular(10),
-                                            bottomLeft: Radius.circular(5)
-                                        ),
-                                        color: Colors.grey.shade800
-                                    ),
-                                    child: Center(
-                                      child: Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 20,
-                                            left: 15,
-                                            right: 15,
-                                            bottom: 20
-                                        ),
-                                        child: IconAndText(color: Colors.white, bigText: 'Flex Dollar', icons: Icons.attach_money_rounded, smallText: 'Check out today\s rates across all savings features on PiggyVest', bigText1: '\$0.00'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                GestureDetector(
-                                  onTap: (){},
-                                  child: Container(
-                                    height: 170,
-                                    width: 168,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(10),
-                                            topRight: Radius.circular(10),
-                                            bottomRight: Radius.circular(10),
-                                            bottomLeft: Radius.circular(5)
-                                        ),
-                                        color: Colors.grey.shade800
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsets.only(
-                                          top: 20,
-                                          left: 15,
-                                          right: 15,
-                                          bottom: 20
-                                      ),
-                                      child: IconAndText(color: Colors.deepPurple.shade300, bigText: 'My PocketApp', icons: Icons.alternate_email, smallText: 'Move your savings to your pocket easily.', bigText1: 'My Pocket'),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
                           ],
                         ),
                       ),
@@ -246,3 +191,4 @@ class _InvestPageState extends State<InvestPage> {
     );
   }
 }
+

@@ -24,8 +24,6 @@ class IconAndText extends StatelessWidget {
         Text(bigText, style: TextStyle(color: color, fontWeight: FontWeight.w800, fontSize: 15, letterSpacing: -2.4, wordSpacing: 0.5),),
         SizedBox(height: 10,),
         Text(smallText, style: TextStyle(color: color1, fontWeight: FontWeight.w600, fontSize: 8.8, letterSpacing: -0.8, wordSpacing: -0.5)),
-        SizedBox(height: 25,),
-        Text(bigText1, style: TextStyle(color: color, fontWeight: FontWeight.w800, fontSize: 15, letterSpacing: -1.5))
       ],
     );
   }

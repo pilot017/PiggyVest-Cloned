@@ -5,6 +5,7 @@ import 'package:piggyvest/Widgets/Icon_and_text_widget.dart';
 import 'package:piggyvest/Widgets/button_icon_widgets.dart';
 import 'package:icon/icon.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:piggyvest/Widgets/homeIcon_and_text_widget.dart';
 
 import '../utils/dimensions.dart';
 
@@ -21,6 +22,186 @@ class _HomePageState extends State<HomePage> {
   double _scaleFactor = 0.88;
   double _height = 130;
   //
+
+  List Containers = [
+    Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+          color: Colors.blue.shade800
+      ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.shield_outlined, color: Colors.white, size: 25,),
+              SizedBox(width: 9,),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 15,),
+                  Text('Total Savings', style: TextStyle(
+                    fontSize: 11,
+                    color: Colors.white,
+                    letterSpacing: -0.8,
+                    fontWeight: FontWeight.w800
+                  ),),
+                  SizedBox(height: 5,),
+                  Text('₦112,000.64', style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      letterSpacing: -1.0,
+                      fontWeight: FontWeight.w800
+                  ),)
+                ],
+              )
+            ],
+          ),
+        ),
+    ),
+    Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+          color: Colors.deepPurple.shade800
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(Icons.trending_up_rounded, color: Colors.white, size: 25,),
+            SizedBox(width: 9,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 15,),
+                Text('Total Investments', style: TextStyle(
+                    fontSize: 11,
+                    color: Colors.white,
+                    letterSpacing: -0.8,
+                    fontWeight: FontWeight.w800
+                ),),
+                SizedBox(height: 5,),
+                Text('₦0.00', style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    letterSpacing: -1.0,
+                    fontWeight: FontWeight.w800
+                ),)
+              ],
+            )
+          ],
+        ),
+      ),
+    ),
+    Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+          color: Colors.blueGrey.shade900
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(Icons.attach_money_rounded, color: Colors.white, size: 25,),
+            SizedBox(width: 9,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 15,),
+                Text('Flex Dollar', style: TextStyle(
+                    fontSize: 11,
+                    color: Colors.white,
+                    letterSpacing: -0.8,
+                    fontWeight: FontWeight.w800
+                ),),
+                SizedBox(height: 5,),
+                Text('\$0.06', style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    letterSpacing: -1.0,
+                    fontWeight: FontWeight.w800
+                ),)
+              ],
+            )
+          ],
+        ),
+      ),
+    ),
+    Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+          color: Colors.grey.shade200
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(Icons.theaters_outlined, color: Colors.pinkAccent.shade200, size: 25,),
+            SizedBox(width: 9,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 15,),
+                Text('Flex Naira', style: TextStyle(
+                    fontSize: 11,
+                    color: Colors.black87,
+                    letterSpacing: -0.8,
+                    fontWeight: FontWeight.w800
+                ),),
+                SizedBox(height: 5,),
+                Text('₦5,000.64', style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.pinkAccent.shade200,
+                    letterSpacing: -1.0,
+                    fontWeight: FontWeight.w700
+                ),)
+              ],
+            )
+          ],
+        ),
+      ),
+    ),
+    Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+          color: Colors.blue.shade800
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(Icons.alternate_email, color: Colors.white, size: 25,),
+            SizedBox(width: 9,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 15,),
+                Text('@phillipobaze\'s pocket', style: TextStyle(
+                    fontSize: 11,
+                    color: Colors.white,
+                    letterSpacing: -0.8,
+                    fontWeight: FontWeight.w800
+                ),),
+                SizedBox(height: 5,),
+                Text('₦30.00', style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    letterSpacing: -1.0,
+                    fontWeight: FontWeight.w800
+                ),)
+              ],
+            )
+          ],
+        ),
+      ),
+    ),
+
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -114,7 +295,8 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                             ),
-                            Padding(padding: EdgeInsets.only(
+                            Padding(
+                              padding: EdgeInsets.only(
                                 top: 3
                             ),
                               child: Container(
@@ -124,10 +306,10 @@ class _HomePageState extends State<HomePage> {
                                   child: Column(
                                     children: [
                                       Container(
-                                        height: 110,
+                                        height: 85,
                                         child: PageView.builder(
                                           controller: pageController,
-                                          itemCount: 5,
+                                          itemCount: Containers.length,
                                           itemBuilder: (context, position) {
                                             return _buildPageItem(position);
                                           },
@@ -639,6 +821,7 @@ class _HomePageState extends State<HomePage> {
       var currScale=1-(_currPageValue-index)*(1-_scaleFactor);
       var currTrans=_height*(1-currScale)/2;
       matrix = Matrix4.diagonal3Values(1, currScale, 1)..setTranslationRaw(0, currTrans, 0);
+
     }
     else if (index==_currPageValue.floor()+1) {
       var currScale=_scaleFactor+(_currPageValue-index+1)*(1-_scaleFactor);
@@ -662,7 +845,7 @@ class _HomePageState extends State<HomePage> {
       child: Stack(
         children: [
           Container(
-            height: 110,
+            height: 85,
             margin: EdgeInsets.only(
                 left: 8,
                 right: 8
@@ -671,6 +854,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
                 color: Colors.blueAccent
             ),
+            child: Containers[index],
             // decoration: BoxDecoration(
             //     borderRadius: BorderRadius.circular(Dimensions.radius30),
             //     color: index.isEven ? Colors.green : Colors.green.shade400,

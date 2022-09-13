@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:piggyvest/pages/homePage.dart';
+import 'package:piggyvest/pages/tab_view_screen.dart';
 // import 'mobileui.dart' if (dart.library.html) 'webui.dart' as multiPlatform;
 import 'package:web_ffi/web_ffi.dart';
 
