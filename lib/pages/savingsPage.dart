@@ -281,23 +281,7 @@ class _SavingsPageState extends State<SavingsPage> {
           ],
         ),
         // backgroundColor: Colors.grey.shade900,
-        bottomNavigationBar: Container(
-          height: 90,
-          width: 400,
-          child: Container(
-            color: Colors.black,
-            height: 100,
-            width: 300,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 15,
-                  left: 13,
-                  right: 13
-              ),
-              child: ButtonIcon(icon2: Colors.blueAccent,color2: Colors.blueAccent,),
-            ),
-          ),
-        )
+
     );
   }
 }

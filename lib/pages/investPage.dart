@@ -171,23 +171,7 @@ class _InvestPageState extends State<InvestPage> {
           ],
         ),
         // backgroundColor: Colors.grey.shade900,
-        bottomNavigationBar: Container(
-          height: 90,
-          width: 400,
-          child: Container(
-            color: Colors.black,
-            height: 100,
-            width: 300,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 15,
-                  left: 13,
-                  right: 13
-              ),
-              child: ButtonIcon(icon3: Colors.deepPurple,color3: Colors.deepPurple,),
-            ),
-          ),
-        )
+
     );
   }
 }

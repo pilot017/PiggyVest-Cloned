@@ -21,33 +21,72 @@ class _HomePageState extends State<HomePage> {
   var _currPageValue = 0.0;
   double _scaleFactor = 0.88;
   double _height = 130;
-  //
 
   List Containers = [
-    Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
-          color: Colors.blue.shade800
+    GestureDetector(
+      onTap: (){},
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+            color: Colors.blue.shade800
+        ),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.shield_outlined, color: Colors.white, size: 25,),
+                SizedBox(width: 9,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 15,),
+                    Text('Total Savings', style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.white,
+                      letterSpacing: -0.8,
+                      fontWeight: FontWeight.w800
+                    ),),
+                    SizedBox(height: 5,),
+                    Text('₦112,000.64', style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        letterSpacing: -1.0,
+                        fontWeight: FontWeight.w800
+                    ),)
+                  ],
+                )
+              ],
+            ),
+          ),
       ),
+    ),
+    GestureDetector(
+      onTap: (){},
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+            color: Colors.deepPurple.shade800
+        ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(Icons.shield_outlined, color: Colors.white, size: 25,),
+              Icon(Icons.trending_up_rounded, color: Colors.white, size: 25,),
               SizedBox(width: 9,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 15,),
-                  Text('Total Savings', style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.white,
-                    letterSpacing: -0.8,
-                    fontWeight: FontWeight.w800
+                  Text('Total Investments', style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.white,
+                      letterSpacing: -0.8,
+                      fontWeight: FontWeight.w800
                   ),),
                   SizedBox(height: 5,),
-                  Text('₦112,000.64', style: TextStyle(
+                  Text('₦0.00', style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
                       letterSpacing: -1.0,
@@ -58,148 +97,122 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-    ),
-    Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
-          color: Colors.deepPurple.shade800
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(Icons.trending_up_rounded, color: Colors.white, size: 25,),
-            SizedBox(width: 9,),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 15,),
-                Text('Total Investments', style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.white,
-                    letterSpacing: -0.8,
-                    fontWeight: FontWeight.w800
-                ),),
-                SizedBox(height: 5,),
-                Text('₦0.00', style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    letterSpacing: -1.0,
-                    fontWeight: FontWeight.w800
-                ),)
-              ],
-            )
-          ],
+    ),
+    GestureDetector(
+      onTap: (){},
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+            color: Colors.blueGrey.shade900
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.attach_money_rounded, color: Colors.white, size: 25,),
+              SizedBox(width: 9,),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 15,),
+                  Text('Flex Dollar', style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.white,
+                      letterSpacing: -0.8,
+                      fontWeight: FontWeight.w800
+                  ),),
+                  SizedBox(height: 5,),
+                  Text('\$0.06', style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      letterSpacing: -1.0,
+                      fontWeight: FontWeight.w800
+                  ),)
+                ],
+              )
+            ],
+          ),
         ),
       ),
     ),
-    Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
-          color: Colors.blueGrey.shade900
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(Icons.attach_money_rounded, color: Colors.white, size: 25,),
-            SizedBox(width: 9,),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 15,),
-                Text('Flex Dollar', style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.white,
-                    letterSpacing: -0.8,
-                    fontWeight: FontWeight.w800
-                ),),
-                SizedBox(height: 5,),
-                Text('\$0.06', style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    letterSpacing: -1.0,
-                    fontWeight: FontWeight.w800
-                ),)
-              ],
-            )
-          ],
+    GestureDetector(
+      onTap: (){},
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+            color: Colors.grey.shade200
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.theaters_outlined, color: Colors.pinkAccent.shade200, size: 25,),
+              SizedBox(width: 9,),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 15,),
+                  Text('Flex Naira', style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.black87,
+                      letterSpacing: -0.8,
+                      fontWeight: FontWeight.w800
+                  ),),
+                  SizedBox(height: 5,),
+                  Text('₦5,000.64', style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.pinkAccent.shade200,
+                      letterSpacing: -1.0,
+                      fontWeight: FontWeight.w700
+                  ),)
+                ],
+              )
+            ],
+          ),
         ),
       ),
     ),
-    Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
-          color: Colors.grey.shade200
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(Icons.theaters_outlined, color: Colors.pinkAccent.shade200, size: 25,),
-            SizedBox(width: 9,),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 15,),
-                Text('Flex Naira', style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.black87,
-                    letterSpacing: -0.8,
-                    fontWeight: FontWeight.w800
-                ),),
-                SizedBox(height: 5,),
-                Text('₦5,000.64', style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.pinkAccent.shade200,
-                    letterSpacing: -1.0,
-                    fontWeight: FontWeight.w700
-                ),)
-              ],
-            )
-          ],
+    GestureDetector(
+      onTap: (){},
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
+            color: Colors.blue.shade800
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.alternate_email, color: Colors.white, size: 25,),
+              SizedBox(width: 9,),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 15,),
+                  Text('@phillipobaze\'s pocket', style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.white,
+                      letterSpacing: -0.8,
+                      fontWeight: FontWeight.w800
+                  ),),
+                  SizedBox(height: 5,),
+                  Text('₦30.00', style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      letterSpacing: -1.0,
+                      fontWeight: FontWeight.w800
+                  ),)
+                ],
+              )
+            ],
+          ),
         ),
       ),
     ),
-    Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(5)),
-          color: Colors.blue.shade800
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(Icons.alternate_email, color: Colors.white, size: 25,),
-            SizedBox(width: 9,),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 15,),
-                Text('@phillipobaze\'s pocket', style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.white,
-                    letterSpacing: -0.8,
-                    fontWeight: FontWeight.w800
-                ),),
-                SizedBox(height: 5,),
-                Text('₦30.00', style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    letterSpacing: -1.0,
-                    fontWeight: FontWeight.w800
-                ),)
-              ],
-            )
-          ],
-        ),
-      ),
-    ),
-
   ];
 
   @override
@@ -214,9 +227,9 @@ class _HomePageState extends State<HomePage> {
   }
   //
   @override
-  void dispose() {
-    pageController.dispose();
-  }
+  // void dispose() {
+  //   pageController.dispose();
+  // }
 
 
   @override
@@ -284,12 +297,15 @@ class _HomePageState extends State<HomePage> {
                                       padding: const EdgeInsets.only(
                                         bottom: 5
                                       ),
-                                      child: CircleAvatar(
-                                        radius: 25,
-                                        backgroundImage: AssetImage('images/phillip.png'),
+                                      // child: CircleAvatar(
+                                      //   radius: 25,
+                                      //   backgroundImage: AssetImage('images/phillip.png'),
+                                      //
+                                      //   // backgroundColor: Colors.blueAccent,
+                                      // ),
+                                      child: Center(
 
-                                        // backgroundColor: Colors.blueAccent,
-                                      ),
+                                      )
                                     ),
                                   ),
                                 ],
@@ -770,7 +786,8 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 )
-              )),
+              )
+          ),
           Positioned(
             top: 685,
               // left: 250,
@@ -795,23 +812,23 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       // backgroundColor: Colors.grey.shade900,
-      bottomNavigationBar: Container(
-        height: 90,
-        width: 400,
-        child: Container(
-          color: Colors.black,
-          height: 100,
-          width: 300,
-          child: Padding(
-            padding: const EdgeInsets.only(
-                top: 15,
-                left: 13,
-                right: 13
-            ),
-            child: ButtonIcon(icon1: Colors.blueAccent,color1: Colors.blueAccent,),
-          ),
-        ),
-      )
+      // bottomNavigationBar: Container(
+      //   height: 90,
+      //   width: 400,
+      //   child: Container(
+      //     color: Colors.black,
+      //     height: 100,
+      //     width: 300,
+      //     child: Padding(
+      //       padding: const EdgeInsets.only(
+      //           top: 15,
+      //           left: 13,
+      //           right: 13
+      //       ),
+      //       child: ButtonIcon(icon1: Colors.blueAccent,color1: Colors.blueAccent,),
+      //     ),
+      //   ),
+      // )
     );
   }
 
@@ -855,11 +872,6 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.blueAccent
             ),
             child: Containers[index],
-            // decoration: BoxDecoration(
-            //     borderRadius: BorderRadius.circular(Dimensions.radius30),
-            //     color: index.isEven ? Colors.green : Colors.green.shade400,
-            //
-            // ),
           )
         ],
       ),

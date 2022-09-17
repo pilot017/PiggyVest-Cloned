@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piggyvest/pages/homePage.dart';
 import 'package:piggyvest/pages/tab_view_screen.dart';
+import 'package:piggyvest/main_screen.dart';
 // import 'mobileui.dart' if (dart.library.html) 'webui.dart' as multiPlatform;
 import 'package:web_ffi/web_ffi.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: HomeTry(),
     );
   }
 }
